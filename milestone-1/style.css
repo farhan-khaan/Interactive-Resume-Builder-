@@ -1,0 +1,235 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+#main{
+    width: 100%;
+    min-height: 100vh;
+}
+.loader{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(135, 208, 241);
+    animation: bgcolor 3s;
+}
+.zoom{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 50%); rotate: -7deg;
+    font-size: 13vw;
+    font-family: courier ;
+    -webkit-text-stroke-width: 0.90vh;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    outline: none;
+    font-weight: 200;
+    opacity: 50%;
+}
+.loader h5{
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    font-size: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30pt;
+    color: azure;
+}
+.loading{
+    position: relative;
+    left: 52%;
+    width: 50%;
+    bottom: -60%;
+    height: 10px;
+    transform: translate(-50%, -50%); rotate: -7deg;
+    background-color: azure;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+}
+.loading::after{
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    height: 100%;
+    border-radius: 4px;
+    animation: load 3s;
+}
+
+@keyframes load{
+    0%{
+        width: 0;
+        background-color: rgb(241, 143, 14);
+    } 
+    25%{
+        width: 25%;
+        background-color: rgb(240, 177, 94);
+    } 
+    50%{
+        width: 50%;
+        background-color: rgb(245, 95, 68);
+    }
+    75%{
+        width: 75%;
+        background-color: rgb(250, 118, 221);
+    }
+    100%{
+        width: 100%;
+        background-color: rgb(195, 248, 151);
+    }
+}
+@keyframes bgcolor{
+    0%{
+        background-color: rgb(241, 143, 14);
+    } 
+    25%{
+        background-color: rgb(240, 177, 94);
+    } 
+    50%{
+        background-color: rgb(245, 95, 68);
+    }
+    75%{
+        background-color: rgb(250, 118, 221);
+    }
+    100%{
+        background-color: rgb(195, 248, 151);
+    }
+}
+.personal-info-bg {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-image: url(C:\Users\Lenovo\Desktop\Hackathon\image\personal-info.jpg);
+    background-position:bottom;
+    opacity:0;
+    overflow:hidden;
+    transition:all cubic-bezier(0.19,1,0.22,1) 1.5s;
+    z-index: 99;
+}
+@keyframes perl-info-ani {
+    from{
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+}
+.personal-logo {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 12vh;
+    transform: translate(-50%, -50%);
+    animation: updown 2s erase-in-out-alternate infinate;
+    opacity: 0%;
+}
+@keyframes updown {
+    from{
+        margin-top: -1vw;
+    }
+    to {
+        margin-top: 1vw;
+    }
+}
+.pi-picture {
+position: absolute;
+width: 9vw;
+top: 50%;
+left: 50%;
+}
+
+
+/* CSS SHEET */
+/* General Styling */
+/*body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 150px;
+}*/
+
+.resume-container {
+    display: flex;
+    background-color: rgb(230, 199, 154);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Section Styling */
+.left-section {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+    width: 35%;
+    text-align: center;
+    border-right: 5px solid #9d9d9e3d;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    margin-top: 10%;
+    border-radius: 50%;
+    border: 5px solid #030000;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 18px;
+    padding: 2%;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: rgb(4, 73, 119);
+    border-radius: 10px;
+    box-shadow: 0 0 15px #888888;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+ul {
+    list-style-type: fill round;
+    padding: 10;
+    margin: 10px 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Right Section Styling */
+.right-section {
+    padding: 20px;
+    width: 65%;
+}
+
+button {
+    position: absolute;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #f7cee9;
+}
+
